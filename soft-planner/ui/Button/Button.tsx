@@ -2,8 +2,10 @@
 import { FC, MouseEventHandler } from "react";
 import './Button.scss';
 import { UIIconsType } from "../Icons/Icons";
-import { UIButtonColor, UIButtonVariant, UIIconPositions } from "../UIEnums/UIEnums";
+import { FontWeight, UIButtonColor, UIButtonVariant, UIIconPositions } from "../ui-system/ui-system";
 import { getClassNames } from "@/lib/utils/getClassNames";
+import { Typography } from "../Typography/Typography";
+import { Icon } from "../Icons/Icon";
 
 type Props = {
     onClick: MouseEventHandler<HTMLButtonElement>;
@@ -14,24 +16,26 @@ type Props = {
     color?: UIButtonColor;
 };
 
-export const Button: FC<Props> = ({ onClick, text, icon: Icon, iconPosition = UIIconPositions.Start, variant = UIButtonVariant.Primary, color = UIButtonColor.Pink }) => {
-    const colorClass = color !== undefined ? UIButtonColor[color].toLowerCase() : '';
-
+export const Button: FC<Props> = ({ 
+    onClick, 
+    text, 
+    icon, 
+    iconPosition = UIIconPositions.Start, 
+    variant = UIButtonVariant.Primary, 
+    color = UIButtonColor.Pink,
+}) => {
     const classNames = getClassNames(
         'ui-button',
         iconPosition === UIIconPositions.Start && 'icon-start',
         iconPosition === UIIconPositions.End && 'icon-end',
-        variant === UIButtonVariant.Primary && 'primary',
-        variant === UIButtonVariant.Secondary && 'secondary',
-        variant === UIButtonVariant.Tertiary && 'tertiary',
-        colorClass,
+        variant,
+        color,
     );
-
 
     return(
         <button className={classNames} onClick={onClick}>
-            {Icon && <Icon />}
-            {text}
+            {icon && <Icon icon={icon} />}
+            {text && <Typography text={text} fontWeight={FontWeight[600]} />}
         </button>
     )
 };

@@ -1,0 +1,41 @@
+@use '../../styles/colors.scss' as c;
+
+:root {
+    --pink: #{c.$dark-pink};
+    --teal: #{c.$dark-teal};
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --pink: #{c.$light-pink};
+    --teal: #{c.$light-teal};
+  }
+}
+
+.ui-form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 12px 0;
+}
+
+.control {
+    display: flex; align-items: center;
+    gap: 5px;
+    height: auto;
+}
+
+.error,
+.helper {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.error-icon {
+    color: var(--pink);
+}
+
+.helper-icon {
+    color: var(--teal);
+}

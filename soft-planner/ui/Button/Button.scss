@@ -3,6 +3,7 @@
 :root {
     --background: #{c.$white};
     --foreground: #{c.$black};
+    --grey: #{c.$light-grey};
     --button-pink: #{c.$dark-pink};
     --button-teal: #{c.$dark-teal};
     --button-purple: #{c.$dark-purple};
@@ -12,6 +13,7 @@
   :root {
     --background: #{c.$black};
     --foreground: #{c.$white};
+    --grey: #{c.$dark-grey};
     --button-pink: #{c.$light-pink};
     --button-teal: #{c.$light-teal};
     --button-purple: #{c.$light-purple};
@@ -32,7 +34,6 @@
 
 .ui-button {
     padding: 5px 10px;
-    font-size: 16px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,10 +41,15 @@
     border: none;
     border-radius: 5px;
     font-weight: 500;
-    margin: 10px 0;
 
     &:hover {
         cursor: pointer;
+        background-color: var(--grey);
+    }
+
+    &:focus {
+        background-color: var(--grey);
+        color: var(--button-color);
     }
 }
 
@@ -57,13 +63,13 @@
 
 .primary {
     background-color: var(--button-color);
-    border: 3px var(--button-color) solid;
+    border: 2px var(--button-color) solid;
     color: var(--background);
 }
 
 .secondary {
     background-color: var(--background);
-    border: 3px var(--button-color) solid;
+    border: 2px var(--button-color) solid;
     color: var(--button-color);
 }
 
