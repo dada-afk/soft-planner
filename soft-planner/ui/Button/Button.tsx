@@ -23,6 +23,7 @@ export const Button: FC<Props> = ({ onClick, text, icon: Icon, iconPosition = UI
         iconPosition === UIIconPositions.End && 'icon-end',
         variant === UIButtonVariant.Primary && 'primary',
         variant === UIButtonVariant.Secondary && 'secondary',
+        variant === UIButtonVariant.Tertiary && 'tertiary',
         colorClass,
     );
 

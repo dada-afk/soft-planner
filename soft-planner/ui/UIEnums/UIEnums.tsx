@@ -6,6 +6,7 @@ export enum UIIconPositions {
 export enum UIButtonVariant {
     Primary,
     Secondary,
+    Tertiary,
 }
 
 export enum UIButtonColor {
