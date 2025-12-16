@@ -1,14 +1,14 @@
-@use 'colors.scss';
+@use 'colors.scss' as c;
 
 :root {
-  --background: $white;
-  --foreground: $black;
+  --background: #{c.$white};
+  --foreground: #{c.$black};
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: $black;
-    --foreground: $white;
+    --background: #{c.$black};
+    --foreground: #{c.$white};
   }
 }
 
