@@ -4,12 +4,12 @@ import { UIFontSize } from "../ui-system/ui-system";
 
 type Props = {
     icon: UIIconsType;
-    size?: UIFontSize;
+    size?: number;
     className?: string;
 }
 
 export const Icon: FC<Props> = ({ icon: Icon, size, className }) => {
     return(
-        <Icon className={className} style={{ fontSize: size }} />
+        <Icon className={className} style={{ fontSize: size, margin: 0 }} />
     )
 }

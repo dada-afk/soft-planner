@@ -46,3 +46,23 @@ export const FontWeight = {
 } as const;
 
 export type UIFontWeight = typeof FontWeight[keyof typeof FontWeight];
+
+export const TextareaRows = {
+  2: 2,
+  4: 4,
+  6: 6,
+}
+
+export type UITextareaRows = typeof TextareaRows[keyof typeof TextareaRows];
+
+// Scale
+
+export enum UIScaleVariant {
+  Energy,
+  Mood,
+}
+
+export enum UIMoodType {
+  Current,
+  Daily
+}

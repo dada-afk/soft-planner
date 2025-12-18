@@ -1,0 +1,65 @@
+@use '../../styles/colors.scss' as c;
+
+:root {
+    --background: #{c.$white};
+    --purple: #{c.$light-purple};
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: #{c.$black};
+        --purple: #{c.$dark-purple};
+    }
+}
+
+label {
+    width: 100%;
+}
+
+.ui-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+
+    .ui-form-field {
+        margin: 0;
+    }
+
+    .input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    }
+
+    .visual-checkbox {
+        width: 25px;
+        height: 25px;
+        border: 2px solid var(--purple);
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.15s ease;
+
+        svg {
+            font-size: 16px;
+        }
+    }
+}
+
+// Checked state
+.input:checked + .visual-checkbox {
+    background-color: var(--purple);
+    border-color: var(--purple);
+
+    svg {
+        color: var(--background);
+    }
+}
+
+// Disabled
+.input:disabled + .visual-checkbox {
+    opacity: 0.5;
+    cursor: not-allowed;
+}

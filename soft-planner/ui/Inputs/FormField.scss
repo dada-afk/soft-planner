@@ -1,14 +1,14 @@
 @use '../../styles/colors.scss' as c;
 
 :root {
-    --pink: #{c.$dark-pink};
-    --teal: #{c.$dark-teal};
+    --red: #{c.$dark-red};
+    --blue: #{c.$dark-blue};
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --pink: #{c.$light-pink};
-    --teal: #{c.$light-teal};
+    --red: #{c.$light-red};
+    --blue: #{c.$light-blue};
   }
 }
 
@@ -16,13 +16,21 @@
     display: flex;
     flex-direction: column;
     gap: 5px;
+    width: 100%;
     margin: 12px 0;
 }
 
+.label,
+.helper,
+.error {
+    margin-left: 5px;
+}
+
 .control {
-    display: flex; align-items: center;
+    display: flex; 
+    align-items: center;
     gap: 5px;
-    height: auto;
+    margin: 0;
 }
 
 .error,
@@ -33,9 +41,9 @@
 }
 
 .error-icon {
-    color: var(--pink);
+    color: var(--red);
 }
 
 .helper-icon {
-    color: var(--teal);
+    color: var(--blue);
 }
