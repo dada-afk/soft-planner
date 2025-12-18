@@ -2,7 +2,7 @@
 import { FC, MouseEventHandler } from "react";
 import './Button.scss';
 import { UIIconsType } from "../Icons/Icons";
-import { FontWeight, UIButtonColor, UIButtonVariant, UIIconPositions } from "../ui-system/ui-system";
+import { FontSize, FontWeight, UIButtonColor, UIButtonVariant, UIIconPositions } from "../ui-system/ui-system";
 import { getClassNames } from "@/lib/utils/getClassNames";
 import { Typography } from "../Typography/Typography";
 import { Icon } from "../Icons/Icon";
@@ -22,7 +22,7 @@ export const Button: FC<Props> = ({
     icon, 
     iconPosition = UIIconPositions.Start, 
     variant = UIButtonVariant.Primary, 
-    color = UIButtonColor.Pink,
+    color = UIButtonColor.Purple,
 }) => {
     const classNames = getClassNames(
         'ui-button',
@@ -35,7 +35,7 @@ export const Button: FC<Props> = ({
     return(
         <button className={classNames} onClick={onClick}>
             {icon && <Icon icon={icon} />}
-            {text && <Typography text={text} fontWeight={FontWeight[600]} />}
+            {text && <Typography className={'button-text'} text={text} fontSize={FontSize.sm} />}
         </button>
     )
 };

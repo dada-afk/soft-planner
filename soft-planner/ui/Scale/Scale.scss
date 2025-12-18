@@ -1,0 +1,61 @@
+@use '../../styles/colors.scss' as c;
+
+:root {
+    --red: #{c.$dark-red};
+    --pink: #{c.$dark-pink};
+    --teal: #{c.$dark-teal};
+    --blue: #{c.$dark-blue};
+    --purple: #{c.$dark-purple};
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --red: #{c.$light-red};
+    --pink: #{c.$light-pink};
+    --teal: #{c.$light-teal};
+    --blue: #{c.$light-blue};
+    --purple: #{c.$light-purple};
+  }
+}
+
+.ui-scale {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    gap: 32px;
+    justify-content: center;
+    align-items: center;
+
+    --energy-color: var(--teal);
+    
+    .label,
+    svg {
+        color: var(--energy-color);
+    }
+
+
+    .slider {
+            width: 100%;
+            accent-color: var(--energy-color);
+        }
+}
+
+.scale--red {
+    --energy-color: var(--red);
+}
+
+.scale--pink {
+    --energy-color: var(--pink);
+}
+
+.scale--teal {
+    --energy-color: var(--teal);
+}
+
+.scale--blue {
+    --energy-color: var(--blue);
+}
+
+.scale--purple {
+    --energy-color: var(--purple);
+}

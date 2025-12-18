@@ -1,6 +1,7 @@
 import { FC, ReactNode } from "react";
 import { FormField } from "./FormField";
 import "./Text.scss";
+import { getClassNames } from "@/lib/utils/getClassNames";
 
 type Props = {
     id: string;
@@ -11,6 +12,7 @@ type Props = {
     onChange: (value: string) => void;
     disabled?: boolean;
     placeholder?: string;
+    isCheckboxText?: boolean;
     children?: ReactNode;
 };
 
@@ -23,18 +25,24 @@ export const Text: FC<Props> = ({
     onChange,
     disabled,
     placeholder,
+    isCheckboxText,
     children,
 }) => {
+    const classNames = getClassNames(
+        'ui-text',
+        isCheckboxText && 'checkbox-text',
+    );
+
     return (
         <FormField id={id} label={label} helperText={helperText} error={error}>
             <input
                 id={id}
-                type='text'
+                type={'text'}
                 value={value}
                 onChange={(e) => onChange(e.target.value)}
                 disabled={disabled}
                 placeholder={placeholder}
-                className={'ui-input'}
+                className={classNames}
             />
             {children}
         </FormField>

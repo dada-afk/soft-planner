@@ -1,0 +1,21 @@
+@use '../../styles/colors.scss' as c;
+
+:root {
+    --grey: #{c.$light-grey};
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --grey: #{c.$dark-grey};
+    }
+}
+
+.ui-card {
+    background-color: var(--grey);
+    padding: 20px 16px;
+    border-radius: 5px;
+
+    &:not(:last-child) {
+        margin-bottom: 12px;
+    }
+}
