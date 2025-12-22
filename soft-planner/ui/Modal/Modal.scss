@@ -1,0 +1,42 @@
+.ui-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+
+    .backdrop {
+        position: absolute;
+        inset: 0;
+        background: rgb(31, 31, 31, 0.4);
+        backdrop-filter: blur(20px);
+    }
+
+    .dialog {
+        position: relative;
+        background: var(--background);
+        color: var(--foreground);
+        border-radius: 16px;
+        max-width: 480px;
+        width: calc(100% - 32px);
+        margin: 20vh auto;
+        padding: 16px;
+        z-index: 1;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    }
+
+    .content {
+        position: relative;
+
+        button {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+    }
+
+    .footer {
+        display: flex;
+        justify-content: flex-end;
+        gap: 8px;
+        margin-top: 16px;
+    }
+}

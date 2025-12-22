@@ -22,7 +22,7 @@ export const Button: FC<Props> = ({
     icon, 
     iconPosition = UIIconPositions.Start, 
     variant = UIButtonVariant.Primary, 
-    color = UIButtonColor.Purple,
+    color = UIButtonColor.Pink,
 }) => {
     const classNames = getClassNames(
         'ui-button',

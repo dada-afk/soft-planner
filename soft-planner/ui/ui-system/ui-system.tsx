@@ -1,5 +1,7 @@
 // Button
 
+import { UIIcons } from "../Icons/Icons";
+
 export enum UIIconPositions {
   Start = 'start',
   End = 'end',
@@ -57,7 +59,7 @@ export type UITextareaRows = typeof TextareaRows[keyof typeof TextareaRows];
 
 // Scale
 
-export enum UIScaleVariant {
+export enum UIFeelingVariant {
   Energy,
   Mood,
 }
@@ -66,3 +68,11 @@ export enum UIMoodType {
   Current,
   Daily
 }
+
+export const LEVELS = [
+    { max: 20, energyLabel: 'Exhausted', moodLabel: 'Awful', color: 'red', emoji: UIIcons.emojiWorst },
+    { max: 40, energyLabel: 'Low', moodLabel: 'Meh', color: 'pink', emoji: UIIcons.emojiBad },
+    { max: 60, energyLabel: 'Okay', moodLabel: 'Okay', color: 'purple', emoji: UIIcons.emojiNeutral  },
+    { max: 80, energyLabel: 'Good', moodLabel: 'Good', color: 'blue', emoji: UIIcons.emojiGood },
+    { max: 100, energyLabel: 'Buzzing', moodLabel: 'Amazing', color: 'teal', emoji: UIIcons.emojiBest },
+];

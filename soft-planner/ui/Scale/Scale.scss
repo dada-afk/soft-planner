@@ -21,41 +21,41 @@
 .ui-scale {
     display: flex;
     flex-direction: column;
-    width: 100vw;
+    width: 100%;
     gap: 32px;
     justify-content: center;
     align-items: center;
 
-    --energy-color: var(--teal);
+    --accent-color: var(--teal);
     
     .label,
     svg {
-        color: var(--energy-color);
+        color: var(--accent-color);
     }
 
-
     .slider {
-            width: 100%;
-            accent-color: var(--energy-color);
-        }
+        width: 100%;
+        accent-color: var(--accent-color);
+    }
 }
 
+
 .scale--red {
-    --energy-color: var(--red);
+    --accent-color: var(--red);
 }
 
 .scale--pink {
-    --energy-color: var(--pink);
+    --accent-color: var(--pink);
 }
 
 .scale--teal {
-    --energy-color: var(--teal);
+    --accent-color: var(--teal);
 }
 
 .scale--blue {
-    --energy-color: var(--blue);
+    --accent-color: var(--blue);
 }
 
 .scale--purple {
-    --energy-color: var(--purple);
+    --accent-color: var(--purple);
 }
