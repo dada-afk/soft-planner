@@ -15,7 +15,7 @@ type Props = {
   disabled?: boolean;
   hasText?: boolean;
   textValue?: string;
-  setTextValue?: Dispatch<SetStateAction<string>>;
+  setTextValue?: (value: string) => void;
 };
 
 export const Checkbox: FC<Props> = ({

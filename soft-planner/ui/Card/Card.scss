@@ -12,10 +12,8 @@
 
 .ui-card {
     background-color: var(--grey);
-    padding: 20px 16px;
+    width: 100%;
+    padding: 16px 12px;
     border-radius: 5px;
-
-    &:not(:last-child) {
-        margin-bottom: 12px;
-    }
+    margin-bottom: 12px;
 }

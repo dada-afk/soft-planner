@@ -17,7 +17,11 @@
     flex-direction: column;
     gap: 5px;
     width: 100%;
-    margin: 12px 0;
+    margin-bottom: 12px;
+}
+
+.label {
+    margin-bottom: 6px;
 }
 
 .label,
@@ -27,7 +31,7 @@
 }
 
 .control {
-    display: flex; 
+    display: flex;
     align-items: center;
     gap: 5px;
     margin: 0;

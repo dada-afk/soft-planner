@@ -1,10 +1,9 @@
 import { FC } from "react";
 import { UIIconsType } from "./Icons"
-import { UIFontSize } from "../ui-system/ui-system";
 
 type Props = {
     icon: UIIconsType;
-    size?: number;
+    size?: string;
     className?: string;
 }
 

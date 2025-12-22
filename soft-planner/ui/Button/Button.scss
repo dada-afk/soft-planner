@@ -48,12 +48,12 @@
 
     &:hover {
         cursor: pointer;
-        background-color: var(--grey);
+        filter: brightness(0.75);
     }
 
     &:focus {
         background-color: var(--button-color);
-        color: var(--background);
+        filter: brightness(0.75);
     }
 }
 
